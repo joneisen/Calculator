@@ -26,7 +26,7 @@ Begin Window MainWindow
    Title           =   "Calculator"
    Visible         =   True
    Width           =   600
-   Begin TextField TextField1
+   Begin TextField FieldOutput
       AcceptTabs      =   False
       Alignment       =   0
       AutoDeactivate  =   True
@@ -48,7 +48,7 @@ Begin Window MainWindow
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
-      LockRight       =   True
+      LockRight       =   False
       LockTop         =   True
       Mask            =   ""
       Password        =   False
@@ -65,11 +65,11 @@ Begin Window MainWindow
       Top             =   0
       Transparent     =   False
       Underline       =   False
-      UseFocusRing    =   True
+      UseFocusRing    =   False
       Visible         =   True
       Width           =   600
    End
-   Begin PushButton PushButton1
+   Begin PushButton Button7
       AutoDeactivate  =   True
       Bold            =   False
       ButtonStyle     =   "6"
@@ -101,7 +101,7 @@ Begin Window MainWindow
       Visible         =   True
       Width           =   150
    End
-   Begin PushButton PushButton2
+   Begin PushButton Button8
       AutoDeactivate  =   True
       Bold            =   False
       ButtonStyle     =   "6"
@@ -133,7 +133,7 @@ Begin Window MainWindow
       Visible         =   True
       Width           =   150
    End
-   Begin PushButton PushButton3
+   Begin PushButton Button9
       AutoDeactivate  =   True
       Bold            =   False
       ButtonStyle     =   "6"
@@ -165,7 +165,7 @@ Begin Window MainWindow
       Visible         =   True
       Width           =   150
    End
-   Begin PushButton PushButton4
+   Begin PushButton Button4
       AutoDeactivate  =   True
       Bold            =   False
       ButtonStyle     =   "6"
@@ -197,7 +197,7 @@ Begin Window MainWindow
       Visible         =   True
       Width           =   150
    End
-   Begin PushButton PushButton5
+   Begin PushButton Button5
       AutoDeactivate  =   True
       Bold            =   False
       ButtonStyle     =   "6"
@@ -229,7 +229,7 @@ Begin Window MainWindow
       Visible         =   True
       Width           =   150
    End
-   Begin PushButton PushButton6
+   Begin PushButton Button6
       AutoDeactivate  =   True
       Bold            =   False
       ButtonStyle     =   "6"
@@ -261,7 +261,7 @@ Begin Window MainWindow
       Visible         =   True
       Width           =   150
    End
-   Begin PushButton PushButton7
+   Begin PushButton Button1
       AutoDeactivate  =   True
       Bold            =   False
       ButtonStyle     =   "6"
@@ -293,7 +293,7 @@ Begin Window MainWindow
       Visible         =   True
       Width           =   150
    End
-   Begin PushButton PushButton8
+   Begin PushButton Button2
       AutoDeactivate  =   True
       Bold            =   False
       ButtonStyle     =   "6"
@@ -325,7 +325,7 @@ Begin Window MainWindow
       Visible         =   True
       Width           =   150
    End
-   Begin PushButton PushButton9
+   Begin PushButton Button3
       AutoDeactivate  =   True
       Bold            =   False
       ButtonStyle     =   "6"
@@ -357,7 +357,7 @@ Begin Window MainWindow
       Visible         =   True
       Width           =   150
    End
-   Begin PushButton PushButton10
+   Begin PushButton ButtonDivide
       AutoDeactivate  =   True
       Bold            =   False
       ButtonStyle     =   "6"
@@ -389,7 +389,7 @@ Begin Window MainWindow
       Visible         =   True
       Width           =   150
    End
-   Begin PushButton PushButton11
+   Begin PushButton ButtonMultiply
       AutoDeactivate  =   True
       Bold            =   False
       ButtonStyle     =   "6"
@@ -421,7 +421,7 @@ Begin Window MainWindow
       Visible         =   True
       Width           =   150
    End
-   Begin PushButton PushButton12
+   Begin PushButton ButtonMinus
       AutoDeactivate  =   True
       Bold            =   False
       ButtonStyle     =   "6"
@@ -453,7 +453,7 @@ Begin Window MainWindow
       Visible         =   True
       Width           =   150
    End
-   Begin PushButton PushButton13
+   Begin PushButton ButtonPlus
       AutoDeactivate  =   True
       Bold            =   False
       ButtonStyle     =   "6"
@@ -485,7 +485,7 @@ Begin Window MainWindow
       Visible         =   True
       Width           =   150
    End
-   Begin PushButton PushButton14
+   Begin PushButton ButtonDecimal
       AutoDeactivate  =   True
       Bold            =   False
       ButtonStyle     =   "6"
@@ -517,7 +517,7 @@ Begin Window MainWindow
       Visible         =   True
       Width           =   150
    End
-   Begin PushButton PushButton15
+   Begin PushButton Button0
       AutoDeactivate  =   True
       Bold            =   False
       ButtonStyle     =   "6"
@@ -549,7 +549,7 @@ Begin Window MainWindow
       Visible         =   True
       Width           =   300
    End
-   Begin PushButton PushButton16
+   Begin PushButton ButtonEquals
       AutoDeactivate  =   True
       Bold            =   False
       ButtonStyle     =   "6"
@@ -581,7 +581,7 @@ Begin Window MainWindow
       Visible         =   True
       Width           =   150
    End
-   Begin PushButton PushButton17
+   Begin PushButton ButtonPercent
       AutoDeactivate  =   True
       Bold            =   False
       ButtonStyle     =   "6"
@@ -613,7 +613,7 @@ Begin Window MainWindow
       Visible         =   True
       Width           =   150
    End
-   Begin PushButton PushButton18
+   Begin PushButton ButtonNegative
       AutoDeactivate  =   True
       Bold            =   False
       ButtonStyle     =   "6"
@@ -645,7 +645,7 @@ Begin Window MainWindow
       Visible         =   True
       Width           =   150
    End
-   Begin PushButton PushButton19
+   Begin PushButton ButtonClear
       AutoDeactivate  =   True
       Bold            =   False
       ButtonStyle     =   "6"
@@ -681,5 +681,322 @@ End
 #tag EndWindow
 
 #tag WindowCode
+	#tag Event
+		Sub Open()
+		  FieldOutput.SetFocus
+		End Sub
+	#tag EndEvent
+
+
 #tag EndWindowCode
 
+#tag Events Button7
+	#tag Event
+		Sub Action()
+		  FieldOutput.AppendText( me.Caption )
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events Button8
+	#tag Event
+		Sub Action()
+		  FieldOutput.AppendText( me.Caption )
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events Button9
+	#tag Event
+		Sub Action()
+		  FieldOutput.AppendText( me.Caption )
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events Button4
+	#tag Event
+		Sub Action()
+		  FieldOutput.AppendText( me.Caption )
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events Button5
+	#tag Event
+		Sub Action()
+		  FieldOutput.AppendText( me.Caption )
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events Button6
+	#tag Event
+		Sub Action()
+		  FieldOutput.AppendText( me.Caption )
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events Button1
+	#tag Event
+		Sub Action()
+		  FieldOutput.AppendText( me.Caption )
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events Button2
+	#tag Event
+		Sub Action()
+		  FieldOutput.AppendText( me.Caption )
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events Button3
+	#tag Event
+		Sub Action()
+		  FieldOutput.AppendText( me.Caption )
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events ButtonDecimal
+	#tag Event
+		Sub Action()
+		  FieldOutput.AppendText( me.Caption )
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events Button0
+	#tag Event
+		Sub Action()
+		  FieldOutput.AppendText( me.Caption )
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events ButtonClear
+	#tag Event
+		Sub Action()
+		  FieldOutput.Text = ""
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag ViewBehavior
+	#tag ViewProperty
+		Name="Name"
+		Visible=true
+		Group="ID"
+		Type="String"
+		EditorType="String"
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="Interfaces"
+		Visible=true
+		Group="ID"
+		Type="String"
+		EditorType="String"
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="Super"
+		Visible=true
+		Group="ID"
+		Type="String"
+		EditorType="String"
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="Width"
+		Visible=true
+		Group="Size"
+		InitialValue="600"
+		Type="Integer"
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="Height"
+		Visible=true
+		Group="Size"
+		InitialValue="400"
+		Type="Integer"
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="MinWidth"
+		Visible=true
+		Group="Size"
+		InitialValue="64"
+		Type="Integer"
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="MinHeight"
+		Visible=true
+		Group="Size"
+		InitialValue="64"
+		Type="Integer"
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="MaxWidth"
+		Visible=true
+		Group="Size"
+		InitialValue="32000"
+		Type="Integer"
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="MaxHeight"
+		Visible=true
+		Group="Size"
+		InitialValue="32000"
+		Type="Integer"
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="Frame"
+		Visible=true
+		Group="Frame"
+		InitialValue="0"
+		Type="Integer"
+		EditorType="Enum"
+		#tag EnumValues
+			"0 - Document"
+			"1 - Movable Modal"
+			"2 - Modal Dialog"
+			"3 - Floating Window"
+			"4 - Plain Box"
+			"5 - Shadowed Box"
+			"6 - Rounded Window"
+			"7 - Global Floating Window"
+			"8 - Sheet Window"
+			"9 - Metal Window"
+			"11 - Modeless Dialog"
+		#tag EndEnumValues
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="Title"
+		Visible=true
+		Group="Frame"
+		InitialValue="Untitled"
+		Type="String"
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="CloseButton"
+		Visible=true
+		Group="Frame"
+		InitialValue="True"
+		Type="Boolean"
+		EditorType="Boolean"
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="Resizeable"
+		Visible=true
+		Group="Frame"
+		InitialValue="True"
+		Type="Boolean"
+		EditorType="Boolean"
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="MaximizeButton"
+		Visible=true
+		Group="Frame"
+		InitialValue="True"
+		Type="Boolean"
+		EditorType="Boolean"
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="MinimizeButton"
+		Visible=true
+		Group="Frame"
+		InitialValue="True"
+		Type="Boolean"
+		EditorType="Boolean"
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="FullScreenButton"
+		Visible=true
+		Group="Frame"
+		InitialValue="False"
+		Type="Boolean"
+		EditorType="Boolean"
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="Composite"
+		Group="OS X (Carbon)"
+		InitialValue="False"
+		Type="Boolean"
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="MacProcID"
+		Group="OS X (Carbon)"
+		InitialValue="0"
+		Type="Integer"
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="ImplicitInstance"
+		Visible=true
+		Group="Behavior"
+		InitialValue="True"
+		Type="Boolean"
+		EditorType="Boolean"
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="Placement"
+		Visible=true
+		Group="Behavior"
+		InitialValue="0"
+		Type="Integer"
+		EditorType="Enum"
+		#tag EnumValues
+			"0 - Default"
+			"1 - Parent Window"
+			"2 - Main Screen"
+			"3 - Parent Window Screen"
+			"4 - Stagger"
+		#tag EndEnumValues
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="Visible"
+		Visible=true
+		Group="Behavior"
+		InitialValue="True"
+		Type="Boolean"
+		EditorType="Boolean"
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="LiveResize"
+		Group="Behavior"
+		InitialValue="True"
+		Type="Boolean"
+		EditorType="Boolean"
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="FullScreen"
+		Group="Behavior"
+		InitialValue="False"
+		Type="Boolean"
+		EditorType="Boolean"
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="HasBackColor"
+		Visible=true
+		Group="Background"
+		InitialValue="False"
+		Type="Boolean"
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="BackColor"
+		Visible=true
+		Group="Background"
+		InitialValue="&hFFFFFF"
+		Type="Color"
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="Backdrop"
+		Visible=true
+		Group="Background"
+		Type="Picture"
+		EditorType="Picture"
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="MenuBar"
+		Visible=true
+		Group="Menus"
+		Type="MenuBar"
+		EditorType="MenuBar"
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="MenuBarVisible"
+		Visible=true
+		Group="Deprecated"
+		InitialValue="True"
+		Type="Boolean"
+		EditorType="Boolean"
+	#tag EndViewProperty
+#tag EndViewBehavior
