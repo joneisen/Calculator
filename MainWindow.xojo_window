@@ -767,6 +767,23 @@ End
 		End Sub
 	#tag EndEvent
 #tag EndEvents
+#tag Events ButtonNegative
+	#tag Event
+		Sub Action()
+		  Dim s As String = FieldOutput.Text
+		  
+		  If s.Left( 1 ) = "-" Then
+		    
+		    FieldOutput.Text = s.Right( s.Len - 1 )
+		    
+		  Else
+		    
+		    FieldOutput.Text = "-" + s
+		    
+		  End If
+		End Sub
+	#tag EndEvent
+#tag EndEvents
 #tag Events ButtonClear
 	#tag Event
 		Sub Action()
