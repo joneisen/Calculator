@@ -689,6 +689,8 @@ End
 	#tag Event
 		Sub Open()
 		  FieldOutput.SetFocus
+		  
+		  window1.Show
 		End Sub
 	#tag EndEvent
 
@@ -711,99 +713,238 @@ End
 #tag Events Button7
 	#tag Event
 		Sub Action()
+		  If app.result = True Then
+		    
+		    FieldOutput.Text = ""
+		    
+		  End If
+		  
 		  FieldOutput.AppendText( Me.Caption )
 		  
 		  app.ClearCount = 0
+		  
+		  app.Result = False
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events Button8
 	#tag Event
 		Sub Action()
+		  If app.result = True Then
+		    
+		    FieldOutput.Text = ""
+		    
+		  End If
+		  
 		  FieldOutput.AppendText( Me.Caption )
 		  
 		  app.ClearCount = 0
+		  
+		  app.Result = False
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events Button9
 	#tag Event
 		Sub Action()
+		  If app.result = True Then
+		    
+		    FieldOutput.Text = ""
+		    
+		  End If
+		  
 		  FieldOutput.AppendText( Me.Caption )
 		  
 		  app.ClearCount = 0
+		  
+		  app.Result = False
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events Button4
 	#tag Event
 		Sub Action()
+		  If app.result = True Then
+		    
+		    FieldOutput.Text = ""
+		    
+		  End If
+		  
 		  FieldOutput.AppendText( Me.Caption )
 		  
 		  app.ClearCount = 0
+		  
+		  app.Result = False
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events Button5
 	#tag Event
 		Sub Action()
+		  If app.result = True Then
+		    
+		    FieldOutput.Text = ""
+		    
+		  End If
+		  
 		  FieldOutput.AppendText( Me.Caption )
 		  
 		  app.ClearCount = 0
+		  
+		  app.Result = False
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events Button6
 	#tag Event
 		Sub Action()
+		  If app.result = True Then
+		    
+		    FieldOutput.Text = ""
+		    
+		  End If
+		  
 		  FieldOutput.AppendText( Me.Caption )
 		  
 		  app.ClearCount = 0
+		  
+		  app.Result = False
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events Button1
 	#tag Event
 		Sub Action()
+		  If app.result = True Then
+		    
+		    FieldOutput.Text = ""
+		    
+		  End If
+		  
 		  FieldOutput.AppendText( Me.Caption )
 		  
 		  app.ClearCount = 0
+		  
+		  app.Result = False
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events Button2
 	#tag Event
 		Sub Action()
+		  If app.result = True Then
+		    
+		    FieldOutput.Text = ""
+		    
+		  End If
+		  
 		  FieldOutput.AppendText( Me.Caption )
 		  
 		  app.ClearCount = 0
+		  
+		  app.Result = False
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events Button3
 	#tag Event
 		Sub Action()
+		  If app.result = True Then
+		    
+		    FieldOutput.Text = ""
+		    
+		  End If
+		  
 		  FieldOutput.AppendText( Me.Caption )
 		  
 		  app.ClearCount = 0
+		  
+		  app.Result = False
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events ButtonDivide
+	#tag Event
+		Sub Action()
+		  app.CurrentValue = app.CurrentValue + FieldOutput.Text + "/"
+		  
+		  FieldOutput.Text = ""
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events ButtonMultiply
+	#tag Event
+		Sub Action()
+		  app.CurrentValue = app.CurrentValue + FieldOutput.Text + "*"
+		  
+		  FieldOutput.Text = ""
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events ButtonMinus
+	#tag Event
+		Sub Action()
+		  app.CurrentValue = app.CurrentValue + FieldOutput.Text + Me.Caption
+		  
+		  FieldOutput.Text = ""
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events ButtonPlus
+	#tag Event
+		Sub Action()
+		  app.CurrentValue = app.CurrentValue + FieldOutput.Text + Me.Caption
+		  
+		  FieldOutput.Text = ""
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events ButtonDecimal
 	#tag Event
 		Sub Action()
+		  If app.result = True Then
+		    
+		    FieldOutput.Text = ""
+		    
+		  End If
+		  
 		  FieldOutput.AppendText( Me.Caption )
 		  
 		  app.ClearCount = 0
+		  
+		  app.Result = False
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events Button0
 	#tag Event
 		Sub Action()
+		  If app.result = True Then
+		    
+		    FieldOutput.Text = ""
+		    
+		  End If
+		  
 		  FieldOutput.AppendText( Me.Caption )
 		  
 		  app.ClearCount = 0
+		  
+		  app.Result = False
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events ButtonEquals
+	#tag Event
+		Sub Action()
+		  Dim r As Double
+		  
+		  r = app.CurrentValue.Val + FieldOutput.Text.Val
+		  
+		  app.CurrentValue = r.ToText
+		  
+		  FieldOutput.Text = r.ToText
+		  
+		  app.Result = True
 		End Sub
 	#tag EndEvent
 #tag EndEvents
@@ -843,7 +984,7 @@ End
 		    
 		    FieldOutput.Text = ""
 		    
-		    app.CurrentValue = 0
+		    app.CurrentValue = "0"
 		    
 		    app.ClearCount = 0
 		    

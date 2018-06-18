@@ -6,11 +6,19 @@ Inherits Application
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
-		CurrentValue As Double
+		CurrentOperation As String
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		CurrentValue As String
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
 		Memory As Double
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		Result As Boolean
 	#tag EndProperty
 
 
@@ -30,6 +38,21 @@ Inherits Application
 
 
 	#tag ViewBehavior
+		#tag ViewProperty
+			Name="ClearCount"
+			Group="Behavior"
+			Type="Integer"
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="CurrentValue"
+			Group="Behavior"
+			Type="Double"
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="Memory"
+			Group="Behavior"
+			Type="Double"
+		#tag EndViewProperty
 	#tag EndViewBehavior
 End Class
 #tag EndClass
