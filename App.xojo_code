@@ -1,6 +1,19 @@
 #tag Class
 Protected Class App
 Inherits Application
+	#tag Property, Flags = &h0
+		ClearCount As Integer
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		CurrentValue As Double
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		Memory As Double
+	#tag EndProperty
+
+
 	#tag Constant, Name = kEditClear, Type = String, Dynamic = False, Default = \"&Delete", Scope = Public
 		#Tag Instance, Platform = Windows, Language = Default, Definition  = \"&Delete"
 		#Tag Instance, Platform = Linux, Language = Default, Definition  = \"&Delete"

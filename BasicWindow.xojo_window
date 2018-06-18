@@ -1,5 +1,5 @@
 #tag Window
-Begin Window MainWindow
+Begin Window BasicWindow
    BackColor       =   &cFFFFFF00
    Backdrop        =   0
    CloseButton     =   True
@@ -26,41 +26,46 @@ Begin Window MainWindow
    Title           =   "Calculator"
    Visible         =   True
    Width           =   600
-   Begin TextField FieldOutput
+   Begin TextArea FieldOutput
       AcceptTabs      =   False
-      Alignment       =   0
+      Alignment       =   3
       AutoDeactivate  =   True
       AutomaticallyCheckSpelling=   False
       BackColor       =   &cFFFFFF00
       Bold            =   False
       Border          =   True
-      CueText         =   ""
       DataField       =   ""
       DataSource      =   ""
       Enabled         =   True
       Format          =   ""
       Height          =   150
       HelpTag         =   ""
+      HideSelection   =   True
       Index           =   -2147483648
       Italic          =   False
       Left            =   0
       LimitText       =   0
+      LineHeight      =   0.0
+      LineSpacing     =   1.0
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   True
       Mask            =   ""
-      Password        =   False
+      Multiline       =   True
       ReadOnly        =   False
       Scope           =   0
+      ScrollbarHorizontal=   False
+      ScrollbarVertical=   True
+      Styled          =   True
       TabIndex        =   0
       TabPanelIndex   =   0
       TabStop         =   True
       Text            =   ""
       TextColor       =   &c00000000
       TextFont        =   "System"
-      TextSize        =   0.0
+      TextSize        =   56.0
       TextUnit        =   0
       Top             =   0
       Transparent     =   False
@@ -690,80 +695,115 @@ End
 
 #tag EndWindowCode
 
+#tag Events FieldOutput
+	#tag Event
+		Sub Open()
+		  Me.Alignment = TextArea.AlignRight
+		  
+		End Sub
+	#tag EndEvent
+	#tag Event
+		Sub TextChange()
+		  //TODO filter out non numeric, comma or decimal characters
+		End Sub
+	#tag EndEvent
+#tag EndEvents
 #tag Events Button7
 	#tag Event
 		Sub Action()
-		  FieldOutput.AppendText( me.Caption )
+		  FieldOutput.AppendText( Me.Caption )
+		  
+		  app.ClearCount = 0
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events Button8
 	#tag Event
 		Sub Action()
-		  FieldOutput.AppendText( me.Caption )
+		  FieldOutput.AppendText( Me.Caption )
+		  
+		  app.ClearCount = 0
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events Button9
 	#tag Event
 		Sub Action()
-		  FieldOutput.AppendText( me.Caption )
+		  FieldOutput.AppendText( Me.Caption )
+		  
+		  app.ClearCount = 0
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events Button4
 	#tag Event
 		Sub Action()
-		  FieldOutput.AppendText( me.Caption )
+		  FieldOutput.AppendText( Me.Caption )
+		  
+		  app.ClearCount = 0
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events Button5
 	#tag Event
 		Sub Action()
-		  FieldOutput.AppendText( me.Caption )
+		  FieldOutput.AppendText( Me.Caption )
+		  
+		  app.ClearCount = 0
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events Button6
 	#tag Event
 		Sub Action()
-		  FieldOutput.AppendText( me.Caption )
+		  FieldOutput.AppendText( Me.Caption )
+		  
+		  app.ClearCount = 0
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events Button1
 	#tag Event
 		Sub Action()
-		  FieldOutput.AppendText( me.Caption )
+		  FieldOutput.AppendText( Me.Caption )
+		  
+		  app.ClearCount = 0
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events Button2
 	#tag Event
 		Sub Action()
-		  FieldOutput.AppendText( me.Caption )
+		  FieldOutput.AppendText( Me.Caption )
+		  
+		  app.ClearCount = 0
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events Button3
 	#tag Event
 		Sub Action()
-		  FieldOutput.AppendText( me.Caption )
+		  FieldOutput.AppendText( Me.Caption )
+		  
+		  app.ClearCount = 0
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events ButtonDecimal
 	#tag Event
 		Sub Action()
-		  FieldOutput.AppendText( me.Caption )
+		  FieldOutput.AppendText( Me.Caption )
+		  
+		  app.ClearCount = 0
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events Button0
 	#tag Event
 		Sub Action()
-		  FieldOutput.AppendText( me.Caption )
+		  FieldOutput.AppendText( Me.Caption )
+		  
+		  app.ClearCount = 0
 		End Sub
 	#tag EndEvent
 #tag EndEvents
@@ -787,7 +827,32 @@ End
 #tag Events ButtonClear
 	#tag Event
 		Sub Action()
-		  FieldOutput.Text = ""
+		  Select Case app.ClearCount
+		    
+		  Case 0
+		    
+		    // If only press clear once just clear the output window 
+		    
+		    FieldOutput.Text = ""
+		    
+		    app.ClearCount = 1
+		    
+		  Case 1
+		    
+		    // If pressed twice clear the output window ( just in case ) and clear the current calculation
+		    
+		    FieldOutput.Text = ""
+		    
+		    app.CurrentValue = 0
+		    
+		    app.ClearCount = 0
+		    
+		  Case 2
+		    
+		    //TODO clear memory
+		    
+		  End Select
+		  
 		End Sub
 	#tag EndEvent
 #tag EndEvents
