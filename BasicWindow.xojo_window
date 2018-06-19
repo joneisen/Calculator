@@ -695,6 +695,35 @@ End
 	#tag EndEvent
 
 
+	#tag Method, Flags = &h0
+		Function Evaluate() As Double
+		  Dim r as Double
+		  
+		  Select Case app.CurrentOperation
+		    
+		  Case "+"
+		    
+		    r = app.CurrentValue.Val + FieldOutput.Text.Val
+		    
+		  Case "-"
+		    
+		    r = app.CurrentValue.Val - FieldOutput.Text.Val
+		    
+		  Case "*"
+		    
+		    r = app.CurrentValue.Val * FieldOutput.Text.Val
+		    
+		  Case "/"
+		    
+		    r = app.CurrentValue.Val / FieldOutput.Text.Val
+		    
+		  End Select
+		  
+		  Return r
+		End Function
+	#tag EndMethod
+
+
 #tag EndWindowCode
 
 #tag Events FieldOutput
@@ -866,36 +895,66 @@ End
 #tag Events ButtonDivide
 	#tag Event
 		Sub Action()
-		  app.CurrentValue = app.CurrentValue + FieldOutput.Text + "/"
+		  Dim r As Double
 		  
-		  FieldOutput.Text = ""
+		  r = 
+		  
+		  FieldOutput.Text = r.ToText
+		  
+		  app.Result = True
+		  
+		  app.CurrentValue = r.ToText
+		  
+		  app.CurrentOperation = "/"
+		  
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events ButtonMultiply
 	#tag Event
 		Sub Action()
-		  app.CurrentValue = app.CurrentValue + FieldOutput.Text + "*"
+		  Dim r As Double
 		  
-		  FieldOutput.Text = ""
+		  r = app.CurrentValue.Val + FieldOutput.Text.Val
+		  
+		  FieldOutput.Text = r.ToText
+		  
+		  app.Result = True
+		  
+		  app.CurrentValue = r.ToText + "*"
+		  
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events ButtonMinus
 	#tag Event
 		Sub Action()
-		  app.CurrentValue = app.CurrentValue + FieldOutput.Text + Me.Caption
+		  Dim r As Double
 		  
-		  FieldOutput.Text = ""
+		  r = app.CurrentValue.Val + FieldOutput.Text.Val
+		  
+		  FieldOutput.Text = r.ToText
+		  
+		  app.Result = True
+		  
+		  app.CurrentValue = r.ToText + Me.Caption
+		  
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events ButtonPlus
 	#tag Event
 		Sub Action()
-		  app.CurrentValue = app.CurrentValue + FieldOutput.Text + Me.Caption
+		  Dim r As Double
 		  
-		  FieldOutput.Text = ""
+		  r = app.CurrentValue.Val + FieldOutput.Text.Val
+		  
+		  FieldOutput.Text = r.ToText
+		  
+		  app.Result = True
+		  
+		  app.CurrentValue = r.ToText + Me.Caption
+		  
 		End Sub
 	#tag EndEvent
 #tag EndEvents
@@ -940,7 +999,7 @@ End
 		  
 		  r = app.CurrentValue.Val + FieldOutput.Text.Val
 		  
-		  app.CurrentValue = r.ToText
+		  app.CurrentValue = ""
 		  
 		  FieldOutput.Text = r.ToText
 		  

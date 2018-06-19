@@ -304,7 +304,7 @@ Begin Window Window1
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   100
+      Width           =   313
    End
    Begin Label Memory
       AutoDeactivate  =   True
@@ -422,6 +422,7 @@ End
 		  Result.Text = Str( app.Result )
 		  Value.Text = app.CurrentValue
 		  Memory.Text = app.Memory.ToText
+		  
 		End Sub
 	#tag EndEvent
 #tag EndEvents
