@@ -6,6 +6,7 @@ Window=BasicWindow;BasicWindow.xojo_window;&h000000004C1337FF;&h0000000000000000
 MenuBar=MainMenuBar;MainMenuBar.xojo_menu;&h000000001D341FFF;&h0000000000000000;false
 BuildSteps=Build Automation;Build Automation.xojo_code;&h000000002BFDAFFF;&h0000000000000000;false
 Window=Window1;Window1.xojo_window;&h000000002C0937FF;&h0000000000000000;false
+Class=Evaluator;Evaluator.xojo_code;&h00000000711AED1D;&h0000000000000000;false
 DefaultWindow=BasicWindow
 AppMenuBar=MainMenuBar
 MajorVersion=0

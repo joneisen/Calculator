@@ -951,27 +951,15 @@ End
 		Sub Action()
 		  app.Values.Append( FieldOutput.Text )
 		  
-		  Dim r As BigNumberMBS
-		  Dim o As String
-		  
+		  Dim r As Double
+		  Dim o, result As String
 		  Dim vCount, oCount As Integer
+		  Dim Eval As New Evaluator
 		  
 		  vCount = app.Values.Ubound
 		  //oCount = app.Operators.Ubound + 1
 		  
 		  For i As Integer = 0 To vCount-1
-		    
-		    //Select Case app.Operators( i )
-		    //
-		    //Case "+"
-		    //
-		    //Case "-"
-		    //
-		    //Case "*"
-		    //
-		    //Case "/"
-		    //
-		    //End Select
 		    
 		    o = o + app.Values( i ) + app.Operators( i )
 		    
@@ -979,14 +967,15 @@ End
 		  
 		  o = o + app.Values( vCount )
 		  
+		  result = Eval.Eval( o )
 		  
-		  r = BigNumberMBS.NumberWithString( o )
+		  r = result.Val
 		  
 		  //r = app.CurrentValue.Val + FieldOutput.Text.Val
-		  //
-		  //app.CurrentValue = r.ToText
-		  //
-		  //FieldOutput.Text = r.ToText
+		  
+		  app.CurrentValue = r.ToText
+		  
+		  FieldOutput.Text = r.ToText
 		  
 		  app.Result = True
 		End Sub
