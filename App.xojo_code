@@ -18,7 +18,15 @@ Inherits Application
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
+		Operators() As Auto
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
 		Result As Boolean
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		Values() As Auto
 	#tag EndProperty
 
 
@@ -46,12 +54,23 @@ Inherits Application
 		#tag ViewProperty
 			Name="CurrentValue"
 			Group="Behavior"
-			Type="Double"
+			Type="String"
+			EditorType="MultiLineEditor"
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="Memory"
 			Group="Behavior"
 			Type="Double"
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="CurrentOperation"
+			Group="Behavior"
+			Type="String"
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="Result"
+			Group="Behavior"
+			Type="Boolean"
 		#tag EndViewProperty
 	#tag EndViewBehavior
 End Class

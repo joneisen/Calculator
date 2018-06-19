@@ -866,7 +866,11 @@ End
 #tag Events ButtonDivide
 	#tag Event
 		Sub Action()
-		  app.CurrentValue = app.CurrentValue + FieldOutput.Text + "/"
+		  app.Values.Append( FieldOutput.Text )
+		  app.Operators.Append( "/" )
+		  
+		  
+		  //app.CurrentValue = app.CurrentValue + FieldOutput.Text + "/"
 		  
 		  FieldOutput.Text = ""
 		End Sub
@@ -875,7 +879,10 @@ End
 #tag Events ButtonMultiply
 	#tag Event
 		Sub Action()
-		  app.CurrentValue = app.CurrentValue + FieldOutput.Text + "*"
+		  app.Values.Append( FieldOutput.Text )
+		  app.Operators.Append( "*" )
+		  
+		  //app.CurrentValue = app.CurrentValue + FieldOutput.Text + "*"
 		  
 		  FieldOutput.Text = ""
 		End Sub
@@ -884,7 +891,10 @@ End
 #tag Events ButtonMinus
 	#tag Event
 		Sub Action()
-		  app.CurrentValue = app.CurrentValue + FieldOutput.Text + Me.Caption
+		  app.Values.Append( FieldOutput.Text )
+		  app.Operators.Append( Me.Caption )
+		  
+		  //app.CurrentValue = app.CurrentValue + FieldOutput.Text + Me.Caption
 		  
 		  FieldOutput.Text = ""
 		End Sub
@@ -893,7 +903,10 @@ End
 #tag Events ButtonPlus
 	#tag Event
 		Sub Action()
-		  app.CurrentValue = app.CurrentValue + FieldOutput.Text + Me.Caption
+		  app.Values.Append( FieldOutput.Text )
+		  app.Operators.Append( Me.Caption )
+		  
+		  //app.CurrentValue = app.CurrentValue + FieldOutput.Text + Me.Caption
 		  
 		  FieldOutput.Text = ""
 		End Sub
@@ -936,13 +949,44 @@ End
 #tag Events ButtonEquals
 	#tag Event
 		Sub Action()
-		  Dim r As Double
+		  app.Values.Append( FieldOutput.Text )
 		  
-		  r = app.CurrentValue.Val + FieldOutput.Text.Val
+		  Dim r As BigNumberMBS
+		  Dim o As String
 		  
-		  app.CurrentValue = r.ToText
+		  Dim vCount, oCount As Integer
 		  
-		  FieldOutput.Text = r.ToText
+		  vCount = app.Values.Ubound
+		  //oCount = app.Operators.Ubound + 1
+		  
+		  For i As Integer = 0 To vCount-1
+		    
+		    //Select Case app.Operators( i )
+		    //
+		    //Case "+"
+		    //
+		    //Case "-"
+		    //
+		    //Case "*"
+		    //
+		    //Case "/"
+		    //
+		    //End Select
+		    
+		    o = o + app.Values( i ) + app.Operators( i )
+		    
+		  Next
+		  
+		  o = o + app.Values( vCount )
+		  
+		  
+		  r = BigNumberMBS.NumberWithString( o )
+		  
+		  //r = app.CurrentValue.Val + FieldOutput.Text.Val
+		  //
+		  //app.CurrentValue = r.ToText
+		  //
+		  //FieldOutput.Text = r.ToText
 		  
 		  app.Result = True
 		End Sub
