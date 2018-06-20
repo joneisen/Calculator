@@ -695,6 +695,35 @@ End
 	#tag EndEvent
 
 
+	#tag Method, Flags = &h0
+		Function Evaluate() As Double
+		  Dim r as Double
+		  
+		  Select Case app.CurrentOperation
+		    
+		  Case "+"
+		    
+		    r = app.CurrentValue.Val + FieldOutput.Text.Val
+		    
+		  Case "-"
+		    
+		    r = app.CurrentValue.Val - FieldOutput.Text.Val
+		    
+		  Case "*"
+		    
+		    r = app.CurrentValue.Val * FieldOutput.Text.Val
+		    
+		  Case "/"
+		    
+		    r = app.CurrentValue.Val / FieldOutput.Text.Val
+		    
+		  End Select
+		  
+		  Return r
+		End Function
+	#tag EndMethod
+
+
 #tag EndWindowCode
 
 #tag Events FieldOutput
