@@ -1,6 +1,26 @@
 #tag Class
 Protected Class App
 Inherits Application
+	#tag Method, Flags = &h0
+		Sub ClearArrays()
+		  
+		  // Clear Values
+		  For i As Integer = app.Values.Ubound  DownTo 0
+		    
+		    app.Values.Remove( i )
+		    
+		  Next
+		  
+		  // Clear Operators
+		  For i As Integer = app.Operators.Ubound  DownTo 0
+		    
+		    app.Operators.Remove( i )
+		    
+		  Next
+		End Sub
+	#tag EndMethod
+
+
 	#tag Property, Flags = &h0
 		ClearCount As Integer
 	#tag EndProperty
@@ -19,6 +39,10 @@ Inherits Application
 
 	#tag Property, Flags = &h0
 		Operators() As Auto
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		percent As Boolean = False
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
@@ -66,6 +90,7 @@ Inherits Application
 			Name="CurrentOperation"
 			Group="Behavior"
 			Type="String"
+			EditorType="MultiLineEditor"
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="Result"

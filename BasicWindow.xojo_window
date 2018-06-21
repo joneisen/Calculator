@@ -9,7 +9,7 @@ Begin Window BasicWindow
    FullScreen      =   False
    FullScreenButton=   False
    HasBackColor    =   False
-   Height          =   900
+   Height          =   350
    ImplicitInstance=   True
    LiveResize      =   True
    MacProcID       =   0
@@ -18,15 +18,15 @@ Begin Window BasicWindow
    MaxWidth        =   32000
    MenuBar         =   489955327
    MenuBarVisible  =   True
-   MinHeight       =   900
+   MinHeight       =   350
    MinimizeButton  =   True
-   MinWidth        =   600
+   MinWidth        =   200
    Placement       =   0
    Resizeable      =   False
    Title           =   "Calculator"
    Visible         =   True
-   Width           =   600
-   Begin TextArea FieldOutput
+   Width           =   200
+   Begin TextArea FieldInput
       AcceptTabs      =   False
       Alignment       =   3
       AutoDeactivate  =   True
@@ -38,12 +38,13 @@ Begin Window BasicWindow
       DataSource      =   ""
       Enabled         =   True
       Format          =   ""
-      Height          =   150
+      Height          =   15
       HelpTag         =   ""
       HideSelection   =   True
       Index           =   -2147483648
+      InitialParent   =   ""
       Italic          =   False
-      Left            =   0
+      Left            =   662
       LimitText       =   0
       LineHeight      =   0.0
       LineSpacing     =   1.0
@@ -59,7 +60,7 @@ Begin Window BasicWindow
       ScrollbarHorizontal=   False
       ScrollbarVertical=   True
       Styled          =   True
-      TabIndex        =   0
+      TabIndex        =   20
       TabPanelIndex   =   0
       TabStop         =   True
       Text            =   ""
@@ -67,12 +68,12 @@ Begin Window BasicWindow
       TextFont        =   "System"
       TextSize        =   56.0
       TextUnit        =   0
-      Top             =   0
+      Top             =   206
       Transparent     =   False
       Underline       =   False
       UseFocusRing    =   False
       Visible         =   True
-      Width           =   600
+      Width           =   15
    End
    Begin PushButton Button7
       AutoDeactivate  =   True
@@ -82,7 +83,7 @@ Begin Window BasicWindow
       Caption         =   "7"
       Default         =   False
       Enabled         =   True
-      Height          =   150
+      Height          =   50
       HelpTag         =   ""
       Index           =   -2147483648
       InitialParent   =   ""
@@ -100,11 +101,11 @@ Begin Window BasicWindow
       TextFont        =   "System"
       TextSize        =   0.0
       TextUnit        =   0
-      Top             =   300
+      Top             =   150
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   150
+      Width           =   50
    End
    Begin PushButton Button8
       AutoDeactivate  =   True
@@ -114,12 +115,12 @@ Begin Window BasicWindow
       Caption         =   "8"
       Default         =   False
       Enabled         =   True
-      Height          =   150
+      Height          =   50
       HelpTag         =   ""
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   150
+      Left            =   50
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -132,11 +133,11 @@ Begin Window BasicWindow
       TextFont        =   "System"
       TextSize        =   0.0
       TextUnit        =   0
-      Top             =   300
+      Top             =   150
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   150
+      Width           =   50
    End
    Begin PushButton Button9
       AutoDeactivate  =   True
@@ -146,12 +147,12 @@ Begin Window BasicWindow
       Caption         =   "9"
       Default         =   False
       Enabled         =   True
-      Height          =   150
+      Height          =   50
       HelpTag         =   ""
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   300
+      Left            =   100
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -164,11 +165,11 @@ Begin Window BasicWindow
       TextFont        =   "System"
       TextSize        =   0.0
       TextUnit        =   0
-      Top             =   300
+      Top             =   150
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   150
+      Width           =   50
    End
    Begin PushButton Button4
       AutoDeactivate  =   True
@@ -178,7 +179,7 @@ Begin Window BasicWindow
       Caption         =   "4"
       Default         =   False
       Enabled         =   True
-      Height          =   150
+      Height          =   50
       HelpTag         =   ""
       Index           =   -2147483648
       InitialParent   =   ""
@@ -196,11 +197,11 @@ Begin Window BasicWindow
       TextFont        =   "System"
       TextSize        =   0.0
       TextUnit        =   0
-      Top             =   450
+      Top             =   200
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   150
+      Width           =   50
    End
    Begin PushButton Button5
       AutoDeactivate  =   True
@@ -210,12 +211,12 @@ Begin Window BasicWindow
       Caption         =   "5"
       Default         =   False
       Enabled         =   True
-      Height          =   150
+      Height          =   50
       HelpTag         =   ""
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   150
+      Left            =   50
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -228,11 +229,11 @@ Begin Window BasicWindow
       TextFont        =   "System"
       TextSize        =   0.0
       TextUnit        =   0
-      Top             =   450
+      Top             =   200
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   150
+      Width           =   50
    End
    Begin PushButton Button6
       AutoDeactivate  =   True
@@ -242,12 +243,12 @@ Begin Window BasicWindow
       Caption         =   "6"
       Default         =   False
       Enabled         =   True
-      Height          =   150
+      Height          =   50
       HelpTag         =   ""
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   300
+      Left            =   100
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -260,11 +261,11 @@ Begin Window BasicWindow
       TextFont        =   "System"
       TextSize        =   0.0
       TextUnit        =   0
-      Top             =   450
+      Top             =   200
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   150
+      Width           =   50
    End
    Begin PushButton Button1
       AutoDeactivate  =   True
@@ -274,7 +275,7 @@ Begin Window BasicWindow
       Caption         =   "1"
       Default         =   False
       Enabled         =   True
-      Height          =   150
+      Height          =   50
       HelpTag         =   ""
       Index           =   -2147483648
       InitialParent   =   ""
@@ -292,11 +293,11 @@ Begin Window BasicWindow
       TextFont        =   "System"
       TextSize        =   0.0
       TextUnit        =   0
-      Top             =   600
+      Top             =   250
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   150
+      Width           =   50
    End
    Begin PushButton Button2
       AutoDeactivate  =   True
@@ -306,12 +307,12 @@ Begin Window BasicWindow
       Caption         =   "2"
       Default         =   False
       Enabled         =   True
-      Height          =   150
+      Height          =   50
       HelpTag         =   ""
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   150
+      Left            =   50
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -324,11 +325,11 @@ Begin Window BasicWindow
       TextFont        =   "System"
       TextSize        =   0.0
       TextUnit        =   0
-      Top             =   600
+      Top             =   250
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   150
+      Width           =   50
    End
    Begin PushButton Button3
       AutoDeactivate  =   True
@@ -338,12 +339,12 @@ Begin Window BasicWindow
       Caption         =   "3"
       Default         =   False
       Enabled         =   True
-      Height          =   150
+      Height          =   50
       HelpTag         =   ""
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   300
+      Left            =   100
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -356,11 +357,11 @@ Begin Window BasicWindow
       TextFont        =   "System"
       TextSize        =   0.0
       TextUnit        =   0
-      Top             =   600
+      Top             =   250
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   150
+      Width           =   50
    End
    Begin PushButton ButtonDivide
       AutoDeactivate  =   True
@@ -370,12 +371,12 @@ Begin Window BasicWindow
       Caption         =   "Divide"
       Default         =   False
       Enabled         =   True
-      Height          =   150
+      Height          =   50
       HelpTag         =   ""
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   450
+      Left            =   150
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -388,11 +389,11 @@ Begin Window BasicWindow
       TextFont        =   "System"
       TextSize        =   0.0
       TextUnit        =   0
-      Top             =   150
+      Top             =   100
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   150
+      Width           =   50
    End
    Begin PushButton ButtonMultiply
       AutoDeactivate  =   True
@@ -402,12 +403,12 @@ Begin Window BasicWindow
       Caption         =   "X"
       Default         =   False
       Enabled         =   True
-      Height          =   150
+      Height          =   50
       HelpTag         =   ""
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   450
+      Left            =   150
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -420,11 +421,11 @@ Begin Window BasicWindow
       TextFont        =   "System"
       TextSize        =   0.0
       TextUnit        =   0
-      Top             =   300
+      Top             =   150
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   150
+      Width           =   50
    End
    Begin PushButton ButtonMinus
       AutoDeactivate  =   True
@@ -434,12 +435,12 @@ Begin Window BasicWindow
       Caption         =   "-"
       Default         =   False
       Enabled         =   True
-      Height          =   150
+      Height          =   50
       HelpTag         =   ""
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   450
+      Left            =   150
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -452,11 +453,11 @@ Begin Window BasicWindow
       TextFont        =   "System"
       TextSize        =   0.0
       TextUnit        =   0
-      Top             =   450
+      Top             =   200
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   150
+      Width           =   50
    End
    Begin PushButton ButtonPlus
       AutoDeactivate  =   True
@@ -466,12 +467,12 @@ Begin Window BasicWindow
       Caption         =   "+"
       Default         =   False
       Enabled         =   True
-      Height          =   150
+      Height          =   50
       HelpTag         =   ""
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   450
+      Left            =   150
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -484,11 +485,11 @@ Begin Window BasicWindow
       TextFont        =   "System"
       TextSize        =   0.0
       TextUnit        =   0
-      Top             =   600
+      Top             =   250
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   150
+      Width           =   50
    End
    Begin PushButton ButtonDecimal
       AutoDeactivate  =   True
@@ -498,12 +499,12 @@ Begin Window BasicWindow
       Caption         =   "."
       Default         =   False
       Enabled         =   True
-      Height          =   150
+      Height          =   50
       HelpTag         =   ""
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   300
+      Left            =   100
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -516,11 +517,11 @@ Begin Window BasicWindow
       TextFont        =   "System"
       TextSize        =   0.0
       TextUnit        =   0
-      Top             =   750
+      Top             =   300
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   150
+      Width           =   50
    End
    Begin PushButton Button0
       AutoDeactivate  =   True
@@ -530,7 +531,7 @@ Begin Window BasicWindow
       Caption         =   "0"
       Default         =   False
       Enabled         =   True
-      Height          =   150
+      Height          =   50
       HelpTag         =   ""
       Index           =   -2147483648
       InitialParent   =   ""
@@ -548,11 +549,11 @@ Begin Window BasicWindow
       TextFont        =   "System"
       TextSize        =   0.0
       TextUnit        =   0
-      Top             =   750
+      Top             =   300
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   300
+      Width           =   100
    End
    Begin PushButton ButtonEquals
       AutoDeactivate  =   True
@@ -562,12 +563,12 @@ Begin Window BasicWindow
       Caption         =   "="
       Default         =   False
       Enabled         =   True
-      Height          =   150
+      Height          =   50
       HelpTag         =   ""
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   450
+      Left            =   150
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -580,11 +581,11 @@ Begin Window BasicWindow
       TextFont        =   "System"
       TextSize        =   0.0
       TextUnit        =   0
-      Top             =   750
+      Top             =   300
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   150
+      Width           =   50
    End
    Begin PushButton ButtonPercent
       AutoDeactivate  =   True
@@ -594,12 +595,12 @@ Begin Window BasicWindow
       Caption         =   "%"
       Default         =   False
       Enabled         =   True
-      Height          =   150
+      Height          =   50
       HelpTag         =   ""
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   300
+      Left            =   100
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -612,11 +613,11 @@ Begin Window BasicWindow
       TextFont        =   "System"
       TextSize        =   0.0
       TextUnit        =   0
-      Top             =   150
+      Top             =   100
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   150
+      Width           =   50
    End
    Begin PushButton ButtonNegative
       AutoDeactivate  =   True
@@ -626,12 +627,12 @@ Begin Window BasicWindow
       Caption         =   "+/-"
       Default         =   False
       Enabled         =   True
-      Height          =   150
+      Height          =   50
       HelpTag         =   ""
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   150
+      Left            =   50
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -644,11 +645,11 @@ Begin Window BasicWindow
       TextFont        =   "System"
       TextSize        =   0.0
       TextUnit        =   0
-      Top             =   150
+      Top             =   100
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   150
+      Width           =   50
    End
    Begin PushButton ButtonClear
       AutoDeactivate  =   True
@@ -658,7 +659,7 @@ Begin Window BasicWindow
       Caption         =   "Clear"
       Default         =   False
       Enabled         =   True
-      Height          =   150
+      Height          =   50
       HelpTag         =   ""
       Index           =   -2147483648
       InitialParent   =   ""
@@ -676,11 +677,59 @@ Begin Window BasicWindow
       TextFont        =   "System"
       TextSize        =   0.0
       TextUnit        =   0
-      Top             =   150
+      Top             =   100
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   150
+      Width           =   50
+   End
+   Begin TextArea FieldOutput
+      AcceptTabs      =   False
+      Alignment       =   3
+      AutoDeactivate  =   True
+      AutomaticallyCheckSpelling=   False
+      BackColor       =   &cFFFFFF00
+      Bold            =   False
+      Border          =   True
+      DataField       =   ""
+      DataSource      =   ""
+      Enabled         =   True
+      Format          =   ""
+      Height          =   100
+      HelpTag         =   ""
+      HideSelection   =   True
+      Index           =   -2147483648
+      Italic          =   False
+      Left            =   0
+      LimitText       =   0
+      LineHeight      =   0.0
+      LineSpacing     =   1.0
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      Mask            =   ""
+      Multiline       =   True
+      ReadOnly        =   True
+      Scope           =   0
+      ScrollbarHorizontal=   False
+      ScrollbarVertical=   True
+      Styled          =   True
+      TabIndex        =   0
+      TabPanelIndex   =   0
+      TabStop         =   True
+      Text            =   ""
+      TextColor       =   &c00000000
+      TextFont        =   "System"
+      TextSize        =   28.0
+      TextUnit        =   0
+      Top             =   0
+      Transparent     =   False
+      Underline       =   False
+      UseFocusRing    =   False
+      Visible         =   True
+      Width           =   200
    End
 End
 #tag EndWindow
@@ -688,9 +737,15 @@ End
 #tag WindowCode
 	#tag Event
 		Sub Open()
-		  FieldOutput.SetFocus
+		  FieldInput.SetFocus
 		  
-		  window1.Show
+		  //window1.Show
+		  
+		  //Dim t As New TextArea
+		  //
+		  //t.Left = -100
+		  //
+		  //KeyDownButton.SetFocus
 		End Sub
 	#tag EndEvent
 
@@ -726,17 +781,104 @@ End
 
 #tag EndWindowCode
 
-#tag Events FieldOutput
+#tag Events FieldInput
 	#tag Event
-		Sub Open()
-		  Me.Alignment = TextArea.AlignRight
+		Function KeyDown(Key As String) As Boolean
+		  //MsgBox(key + "     " + key.Asc.ToText)
 		  
-		End Sub
-	#tag EndEvent
-	#tag Event
-		Sub TextChange()
-		  //TODO filter out non numeric, comma or decimal characters
-		End Sub
+		  Select Case Key
+		    
+		  Case "0"
+		    
+		    Button0.Push
+		    
+		  Case "1"
+		    
+		    Button1.Push
+		    
+		  Case "2"
+		    
+		    Button2.Push
+		    
+		  Case "3"
+		    
+		    Button3.Push
+		    
+		  Case "4"
+		    
+		    Button4.Push
+		    
+		  Case "5"
+		    
+		    Button5.Push
+		    
+		  Case "6"
+		    
+		    Button6.Push
+		    
+		  Case "7" 
+		    
+		    Button7.Push
+		    
+		  Case "8"
+		    
+		    Button8.Push
+		    
+		  Case "9"
+		    
+		    Button9.Push
+		    
+		  Case "."
+		    
+		    ButtonDecimal.Push
+		    
+		  Case "/"
+		    
+		    ButtonDivide.Push
+		    
+		  Case "-"
+		    
+		    If FieldOutput.Text = "" Then
+		      
+		      ButtonNegative.Push
+		      
+		    Else
+		      
+		      ButtonMinus.Push
+		      
+		    End If
+		    
+		  Case "*"
+		    
+		    ButtonMultiply.Push
+		    
+		  Case "%"
+		    
+		    ButtonPercent.Push
+		    
+		  Case "+"
+		    
+		    ButtonPlus.Push
+		    
+		  End Select
+		  
+		  Select Case key.Asc
+		    
+		  Case 27
+		    
+		    ButtonClear.push
+		    
+		  Case 10
+		    
+		    ButtonEquals.Push
+		    
+		  Case 13
+		    
+		    ButtonEquals.Push
+		    
+		  End Select
+		  
+		End Function
 	#tag EndEvent
 #tag EndEvents
 #tag Events Button7
@@ -895,7 +1037,28 @@ End
 #tag Events ButtonDivide
 	#tag Event
 		Sub Action()
-		  app.Values.Append( FieldOutput.Text )
+		  If app.percent = True Then
+		    
+		    Dim t As String = FieldOutput.Text
+		    
+		    If t.Len > 1 Then
+		      
+		      t = t.Left( t.Len - 2 ) + "." + t.Right( 2 )
+		      
+		    Elseif t.Len = 1 Then
+		      
+		      t = ".0" + t
+		      
+		    End If
+		    
+		    app.Values.Append( t )
+		    
+		  Else
+		    
+		    app.Values.Append( FieldOutput.Text )
+		    
+		  End If
+		  
 		  app.Operators.Append( "/" )
 		  
 		  
@@ -908,10 +1071,29 @@ End
 #tag Events ButtonMultiply
 	#tag Event
 		Sub Action()
-		  app.Values.Append( FieldOutput.Text )
-		  app.Operators.Append( "*" )
+		  If app.percent = True Then
+		    
+		    Dim t As String = FieldOutput.Text
+		    
+		    If t.Len > 1 Then
+		      
+		      t = t.Left( t.Len - 2 ) + "." + t.Right( 2 )
+		      
+		    Elseif t.Len = 1 Then
+		      
+		      t = ".0" + t
+		      
+		    End If
+		    
+		    app.Values.Append( t )
+		    
+		  Else
+		    
+		    app.Values.Append( FieldOutput.Text )
+		    
+		  End If
 		  
-		  //app.CurrentValue = app.CurrentValue + FieldOutput.Text + "*"
+		  app.Operators.Append( "*" )
 		  
 		  FieldOutput.Text = ""
 		End Sub
@@ -920,10 +1102,29 @@ End
 #tag Events ButtonMinus
 	#tag Event
 		Sub Action()
-		  app.Values.Append( FieldOutput.Text )
-		  app.Operators.Append( Me.Caption )
+		  If app.percent = True Then
+		    
+		    Dim t As String = FieldOutput.Text
+		    
+		    If t.Len > 1 Then
+		      
+		      t = t.Left( t.Len - 2 ) + "." + t.Right( 2 )
+		      
+		    Elseif t.Len = 1 Then
+		      
+		      t = ".0" + t
+		      
+		    End If
+		    
+		    app.Values.Append( t )
+		    
+		  Else
+		    
+		    app.Values.Append( FieldOutput.Text )
+		    
+		  End If
 		  
-		  //app.CurrentValue = app.CurrentValue + FieldOutput.Text + Me.Caption
+		  app.Operators.Append( Me.Caption )
 		  
 		  FieldOutput.Text = ""
 		End Sub
@@ -932,10 +1133,29 @@ End
 #tag Events ButtonPlus
 	#tag Event
 		Sub Action()
-		  app.Values.Append( FieldOutput.Text )
-		  app.Operators.Append( Me.Caption )
+		  If app.percent = True Then
+		    
+		    Dim t As String = FieldOutput.Text
+		    
+		    If t.Len > 1 Then
+		      
+		      t = t.Left( t.Len - 2 ) + "." + t.Right( 2 )
+		      
+		    Elseif t.Len = 1 Then
+		      
+		      t = ".0" + t
+		      
+		    End If
+		    
+		    app.Values.Append( t )
+		    
+		  Else
+		    
+		    app.Values.Append( FieldOutput.Text )
+		    
+		  End If
 		  
-		  //app.CurrentValue = app.CurrentValue + FieldOutput.Text + Me.Caption
+		  app.Operators.Append( Me.Caption )
 		  
 		  FieldOutput.Text = ""
 		End Sub
@@ -985,28 +1205,56 @@ End
 		  Dim vCount, oCount As Integer
 		  Dim Eval As New Evaluator
 		  
-		  vCount = app.Values.Ubound
-		  //oCount = app.Operators.Ubound + 1
-		  
-		  For i As Integer = 0 To vCount-1
+		  // If there are any operators in the operators array
+		  If app.Operators.Ubound > -1 Then
 		    
-		    o = o + app.Values( i ) + app.Operators( i )
+		    vCount = app.Values.Ubound
+		    oCount = app.Operators.Ubound
 		    
-		  Next
-		  
-		  o = o + app.Values( vCount )
-		  
-		  result = Eval.Eval( o )
-		  
-		  r = result.Val
-		  
-		  //r = app.CurrentValue.Val + FieldOutput.Text.Val
+		    For i As Integer = 0 To vCount-1
+		      
+		      o = o + app.Values( i ) + app.Operators( i )
+		      
+		    Next
+		    
+		    o = o + app.Values( vCount )
+		    
+		    result = Eval.Eval( o )
+		    
+		    r = result.Val
+		    
+		    //////////////////////////
+		    // Clear the arrays
+		    
+		    app.ClearArrays
+		    
+		    //////////////////////////
+		    
+		  Else // Else just display the current value
+		    
+		    o = app.Values( 0 )
+		    
+		    r = o.Val
+		    
+		    app.ClearArrays
+		    
+		  End If
 		  
 		  app.CurrentValue = r.ToText
 		  
 		  FieldOutput.Text = r.ToText
 		  
 		  app.Result = True
+		  
+		  FieldInput.Text = ""
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events ButtonPercent
+	#tag Event
+		Sub Action()
+		  app.percent = True
+		  
 		End Sub
 	#tag EndEvent
 #tag EndEvents
@@ -1050,11 +1298,21 @@ End
 		    
 		    app.ClearCount = 0
 		    
+		    app.ClearArrays
+		    
 		  Case 2
 		    
 		    //TODO clear memory
 		    
 		  End Select
+		  
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events FieldOutput
+	#tag Event
+		Sub Open()
+		  Me.Alignment = TextArea.AlignRight
 		  
 		End Sub
 	#tag EndEvent
