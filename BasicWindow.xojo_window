@@ -1240,9 +1240,27 @@ End
 		    
 		  End If
 		  
-		  app.CurrentValue = r.ToText
+		  Dim z As String = r.ToText
 		  
-		  FieldOutput.Text = r.ToText
+		  If z.InStr( "." ) > 0 Then
+		    
+		    While z.Right( 1 ) = "0"
+		      
+		      z = z.Left( z.Len - 1 )
+		      
+		    Wend
+		    
+		    If z.Left( z.Len - 1 ) = "."
+		      
+		      z = z.Left( z.Len - 1 )
+		      
+		    End If
+		    
+		  End If
+		  
+		  app.CurrentValue = z
+		  
+		  FieldOutput.Text = z
 		  
 		  app.Result = True
 		  
