@@ -368,7 +368,7 @@ Begin Window BasicWindow
       Bold            =   False
       ButtonStyle     =   "6"
       Cancel          =   False
-      Caption         =   "Divide"
+      Caption         =   "÷"
       Default         =   False
       Enabled         =   True
       Height          =   50
@@ -400,7 +400,7 @@ Begin Window BasicWindow
       Bold            =   False
       ButtonStyle     =   "6"
       Cancel          =   False
-      Caption         =   "X"
+      Caption         =   "x"
       Default         =   False
       Enabled         =   True
       Height          =   50
@@ -419,7 +419,7 @@ Begin Window BasicWindow
       TabPanelIndex   =   0
       TabStop         =   True
       TextFont        =   "System"
-      TextSize        =   0.0
+      TextSize        =   14.0
       TextUnit        =   0
       Top             =   150
       Transparent     =   False
@@ -1066,6 +1066,8 @@ End
 		    
 		    app.Values.Append( t )
 		    
+		    app.percent = False
+		    
 		  Else
 		    
 		    app.Values.Append( FieldOutput.Text )
@@ -1098,7 +1100,10 @@ End
 		      
 		    End If
 		    
-		    app.Values.Append( t )
+		    app.Values.Append( t )  
+		    
+		    app.percent = False
+		    
 		    
 		  Else
 		    
@@ -1131,6 +1136,8 @@ End
 		    
 		    app.Values.Append( t )
 		    
+		    app.percent = False
+		    
 		  Else
 		    
 		    app.Values.Append( FieldOutput.Text )
@@ -1160,7 +1167,10 @@ End
 		      
 		    End If
 		    
-		    app.Values.Append( t )
+		    app.Values.Append( t )  
+		    
+		    app.percent = False
+		    
 		    
 		  Else
 		    
@@ -1211,7 +1221,29 @@ End
 #tag Events ButtonEquals
 	#tag Event
 		Sub Action()
-		  app.Values.Append( FieldOutput.Text )
+		  If app.percent = True Then
+		    
+		    Dim t As String = FieldOutput.Text
+		    
+		    If t.Len > 1 Then
+		      
+		      t = t.Left( t.Len - 2 ) + "." + t.Right( 2 )
+		      
+		    Elseif t.Len = 1 Then
+		      
+		      t = ".0" + t
+		      
+		    End If
+		    
+		    app.Values.Append( t )  
+		    
+		    app.percent = False
+		    
+		  Else
+		    
+		    app.Values.Append( FieldOutput.Text )
+		    
+		  End If
 		  
 		  Dim r As Double
 		  Dim o, result As String
@@ -1292,7 +1324,6 @@ End
 	#tag Event
 		Sub Action()
 		  app.percent = True
-		  
 		End Sub
 	#tag EndEvent
 #tag EndEvents
