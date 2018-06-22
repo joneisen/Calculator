@@ -1,6 +1,28 @@
 #tag Class
 Protected Class App
 Inherits Application
+	#tag MenuHandler
+		Function PaperTape() As Boolean Handles PaperTape.Action
+			If PaperTapeWindow.Visible = True Then
+			
+			PaperTapeWindow.Visible = False
+			
+			Return False
+			
+			Else
+			
+			PaperTapeWindow.Show
+			
+			BasicWindow.FieldInput.SetFocus
+			
+			Return True
+			
+			End If
+			
+		End Function
+	#tag EndMenuHandler
+
+
 	#tag Method, Flags = &h0
 		Sub ClearArrays()
 		  
@@ -95,6 +117,12 @@ Inherits Application
 		#tag ViewProperty
 			Name="Result"
 			Group="Behavior"
+			Type="Boolean"
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="percent"
+			Group="Behavior"
+			InitialValue="False"
 			Type="Boolean"
 		#tag EndViewProperty
 	#tag EndViewBehavior

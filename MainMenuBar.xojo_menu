@@ -94,5 +94,19 @@ Begin Menu MainMenuBar
          Visible = True
       End
    End
+   Begin MenuItem View
+      SpecialMenu = 0
+      Text = "View"
+      Index = -2147483648
+      AutoEnable = True
+      Visible = True
+      Begin MenuItem PaperTape
+         SpecialMenu = 0
+         Text = "Toggle Paper Tape"
+         Index = -2147483648
+         AutoEnable = True
+         Visible = True
+      End
+   End
 End
 #tag EndMenu

@@ -876,9 +876,22 @@ End
 		    
 		    ButtonEquals.Push
 		    
+		  Case 8
+		    
+		    ButtonClear.Push
+		    
+		  Case 3
+		    
+		    ButtonEquals.Push
+		    
 		  End Select
 		  
 		End Function
+	#tag EndEvent
+	#tag Event
+		Sub LostFocus()
+		  me.SetFocus
+		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events Button7
@@ -1250,7 +1263,7 @@ End
 		      
 		    Wend
 		    
-		    If z.Left( z.Len - 1 ) = "."
+		    If z.Right( 1 ) = "." Then
 		      
 		      z = z.Left( z.Len - 1 )
 		      
@@ -1265,6 +1278,13 @@ End
 		  app.Result = True
 		  
 		  FieldInput.Text = ""
+		  
+		  PaperTapeWindow.Listbox1.AddRow
+		  
+		  PaperTapeWindow.Listbox1.Cell( PaperTapeWindow.Listbox1.LastIndex, 2 ) = o
+		  
+		  PaperTapeWindow.Listbox1.AddRow( "=", r.ToText )
+		  
 		End Sub
 	#tag EndEvent
 #tag EndEvents
